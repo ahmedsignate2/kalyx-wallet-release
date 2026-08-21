@@ -1,16 +1,16 @@
-# 📱 Nova Wallet — Releases & Binaries
+# 📱 Nova Wallet — Releases & Binaires
 
 Bienvenue sur le dépôt officiel de distribution des exécutables de **Nova Wallet**.
 
-Nova Wallet est un portefeuille crypto mobile non-custodial multi-chaîne compatible EVM, Bitcoin et Solana, intégrant WalletConnect v2 et les swaps cross-chain via LI.FI.
+Nova Wallet est un portefeuille mobile crypto non-custodial multi-chaîne compatible EVM, Bitcoin et Solana, intégrant WalletConnect v2 et les swaps cross-chain via LI.FI.
 
 ---
 
 ## 📲 Télécharger la dernière version
 
-Cliquez ci-dessous pour télécharger le fichier APK Android officiel :
+Cliquez ci-dessous pour télécharger directement le fichier APK Android officiel :
 
-[![Download APK](https://img.shields.io/badge/Download-APK%20v0.0.1-brightgreen?style=for-the-badge&logo=android)](https://github.com/ahmedsignate2/nova-wallet-binaries/releases/latest)
+[![Download APK](https://img.shields.io/badge/Download-APK%20v0.0.1-brightgreen?style=for-the-badge&logo=android)](https://github.com/ahmedsignate2/nova-wallet-release/releases/download/v0.0.1/nova-wallet-v0.0.1.apk)
 
 ---
 
