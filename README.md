@@ -1,76 +1,66 @@
-# 🔐 Nova Wallet
+# Kalyx Wallet
 
-### Secure. Non-custodial. Multi-chain.
+### Vos clés. Votre téléphone. Rien d'autre.
 
-Nova Wallet est un **wallet crypto mobile non-custodial** développé avec **React Native, Expo et TypeScript**.
+Kalyx est un **wallet crypto mobile non-custodial** (React Native / Expo / TypeScript). Les clés privées et la phrase de récupération sont générées et chiffrées **sur l'appareil** — Kalyx n'a aucun serveur de comptes, aucun accès à vos fonds.
 
-Il offre une expérience moderne et fluide avec une gestion 100 % locale des clés privées et phrases de récupération (EVM, Bitcoin, Solana), sans backend de conservation propriétaire.
-
----
-
-## ⭐ Soutenir le projet
-Si vous appréciez le projet ou le travail fourni, **n'hésitez pas à laisser une étoile (Star ⭐)** en haut à droite du repository GitHub ! Cela aide énormément à donner de la visibilité au projet.
+🌐 Site : **[kalyxwallet.com](https://kalyxwallet.com)** · 📧 Support : **support@kalyxwallet.com** · 💬 Telegram : **[@kalyxntw](https://t.me/kalyxntw)**
 
 ---
 
-## 📥 Télécharger et tester l'APK
+## 📥 Télécharger l'APK (Android)
 
-👉 **[Télécharger le fichier APK (v0.0.1)](https://github.com/ahmedsignate2/nova-wallet-release/releases/latest)**
+👉 **[kalyx-wallet.apk — dernière version](https://github.com/ahmedsignate2/nova-wallet-release/releases/latest/download/kalyx-wallet.apk)**
 
-### 📲 Installation sur Android :
-1. Téléchargez l'APK depuis votre smartphone.
-2. Ouvrez le fichier téléchargé.
-3. Si Android affiche une alerte, autorisez l'installation depuis cette source :
-   * **Paramètres** > **Sécurité** > **Installer des applications inconnues** > Activer.
-4. Lancez Nova Wallet et testez l'application !
+Toutes les versions : [Releases](https://github.com/ahmedsignate2/nova-wallet-release/releases).
 
----
+### Installation
+1. Téléchargez l'APK depuis votre téléphone.
+2. Ouvrez le fichier.
+3. Si Android le demande, autorisez l'installation depuis cette source : **Paramètres → Sécurité → Installer des applications inconnues**.
+4. Lancez Kalyx, créez un portefeuille (ou importez une phrase), notez vos 12 mots.
 
-## 💼 Acquisition du projet / Commercial Inquiries
-
-Nova Wallet et l'ensemble de sa propriété intellectuelle sont **actuellement proposés à l'acquisition**.
-
-### Ce qui est inclus dans l'acquisition :
-* Le **code source complet et propriétaire** (React Native / Expo / TypeScript).
-* Le **moteur cryptographique & multi-chaînes** (EVM, Bitcoin, Solana).
-* L'architecture modulaire complète (*Chain Adapters*, gestion sécurisée du coffre local).
-* L'ensemble des intégrations (WalletConnect v2, LI.FI Swap & Bridge, GoPlus Security, CoinGecko, Alchemy).
-* La documentation technique intégrale et les guides de déploiement.
-
-Pour une acquisition, un partenariat ou une demande d'accès au code source :  
-📧 **support@kalyxwallet.com**
+iOS et extension navigateur : à venir.
 
 ---
 
-## ✨ Fonctionnalités principales
+## ✨ Ce que fait l'application
 
-* **Gestion Multi-chain :** Support EVM complet (Ethereum, BNB Chain, Polygon, Base, Arbitrum, Optimism, Linea, etc.), Bitcoin (BIP-84 SegWit natif) et Solana (SLIP-0010 / Tokens SPL).
-* **Sécurité locale avancée :** Stockage sécurisé (`expo-secure-store`), protection par code PIN, déverrouillage biométrique (Face ID / Touch ID), détection anti-phishing et analyse de risques (GoPlus).
-* **Swap & Bridge intégrés :** Intégration complète du protocole LI.FI.
-* **dApps & Web3 :** Prise en charge de WalletConnect v2, EIP-712 et SIWE.
-* **Sauvegarde chiffrée :** Export/import JSON chiffré côté client (AES-256-GCM).
-
----
-
-## ⚠️ Avertissement & Clause de non-responsabilité (Disclaimer)
-
-**À LIRE ATTENTIVEMENT AVANT UTILISATION :**
-
-* **Version de test / Bêta :** Nova Wallet est actuellement en phase active de développement et de test. Le logiciel n'a fait l'objet d'aucun audit de sécurité formel indépendant.
-* **Non-responsabilité totale :** L'application est fournie « en l'état » (*as is*), sans aucune garantie d'aucune sorte, expresse ou implicite.
-* **Exclusion de pertes de fonds :** En aucun cas l'auteur, le développeur ou les contributeurs ne pourront être tenus responsables de pertes financières, de fonds bloqués, de piratages, de bugs logiciels, d'erreurs de réseau, de défaillances de services tiers (RPC, LI.FI, WalletConnect) ou de mauvaise manipulation de vos phrases de récupération et clés privées.
-* **Recommandation :** Il est strictement déconseillé d'importer ou de manipuler des montants réels importants. Utilisez uniquement des devises de test (testnets) ou des sommes minimes dédiées aux tests applicatifs.
+* **Multi-chaînes** — Bitcoin (SegWit natif), Ethereum et ses Layer 2, Solana : plus de 60 réseaux agrégés dans un seul solde.
+* **Envoyer en quatre gestes** — destinataire, montant, récapitulatif en devise, puis maintien de 1,2 s. Détection d'empoisonnement d'adresse **bloquante**.
+* **Swap & Bridge** — Jupiter (Solana), LI.FI et Relay (EVM, cross-chain). Frais Kalyx : 0,3 % sur LI.FI, 0 % ailleurs.
+* **Earn** — Aave v3, Lido, Rocket Pool, Benqi, Jito, Marinade. 0 % de frais Kalyx.
+* **dApps** — navigateur intégré et **WalletConnect v2** (EVM, Solana, Bitcoin). Chaque signature est simulée et expliquée en clair avant d'être donnée (WalletConnect Verify, GoPlus).
+* **Sécurité** — AES-256-GCM avec clé dérivée du PIN (scrypt), stockage Keystore / Keychain, biométrie, délai croissant après un mauvais code, floutage dans les applications récentes.
+* **Sauvegarde chiffrée** — fichier local ou dossier privé Google Drive, chiffré sur l'appareil avec votre mot de passe. Sans lui, la sauvegarde est inutilisable, même par Kalyx.
+* **Copilot** — assistant intégré, avec votre propre clé d'IA (BYOK). Il ne voit jamais vos adresses, clés, phrase ou PIN.
+* **15 langues.**
 
 ---
 
-## 🧪 Signalement de bugs & Retours
+## ⚠️ Avertissement
 
-Vous testez l'application ? Vos retours et signalements de bugs sont les bienvenus :
-* Ouvrez une **[Issue GitHub](https://github.com/ahmedsignate2/nova-wallet-release/issues)**.
-* Ou écrivez à : **support@kalyxwallet.com**
+* **Version de test (bêta)** : le logiciel n'a pas encore fait l'objet d'un audit de sécurité indépendant.
+* L'application est fournie « en l'état », sans garantie d'aucune sorte.
+* L'éditeur ne peut être tenu responsable de pertes de fonds, d'erreurs de réseau, de défaillances de services tiers (RPC, agrégateurs, WalletConnect) ou d'une mauvaise manipulation de votre phrase de récupération.
+* **Testez avec des montants minimes ou sur testnet.** Une transaction confirmée est irréversible ; une phrase perdue ne se récupère pas.
+
+Conditions d'utilisation et politique de confidentialité : [kalyxwallet.com/terms](https://kalyxwallet.com/terms/) · [kalyxwallet.com/privacy](https://kalyxwallet.com/privacy/)
 
 ---
 
-### 📄 Propriété intellectuelle
-Copyright © 2026 Kalyx. Tous droits réservés.  
-Toute reproduction, décompilation, rétro-ingénierie ou redistribution non autorisée de l'APK ou des éléments graphiques est strictement interdite.
+## 🧪 Signaler un bug
+
+* Ouvrez une **[issue](https://github.com/ahmedsignate2/nova-wallet-release/issues)** (version de l'app, téléphone, étapes, capture).
+* Ou depuis l'application : *Menu → Support* génère un ticket de diagnostic **sans aucune donnée sensible**.
+* Ou par e-mail : **support@kalyxwallet.com**
+
+---
+
+## 💼 Partenariats & acquisition
+
+Le code source de Kalyx est propriétaire. Pour un partenariat, un audit ou une demande d'acquisition : **support@kalyxwallet.com**.
+
+---
+
+Copyright © 2026 Kalyx. Tous droits réservés. Toute décompilation, rétro-ingénierie ou redistribution non autorisée de l'APK est interdite.
