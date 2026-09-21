@@ -1,66 +1,100 @@
-# Kalyx Wallet
+# Kalyx Wallet — Releases
 
-### Vos clés. Votre téléphone. Rien d'autre.
+**Official Android releases (signed APK) of Kalyx Wallet, a non-custodial multi-chain crypto wallet.**
+Source code: **[github.com/ahmedsignate2/kalyx-wallet](https://github.com/ahmedsignate2/kalyx-wallet)** · Site: **[kalyxwallet.com](https://kalyxwallet.com)** · Web dashboard: **[app.kalyxwallet.com](https://app.kalyxwallet.com)**
 
-Kalyx est un **wallet crypto mobile non-custodial** (React Native / Expo / TypeScript). Les clés privées et la phrase de récupération sont générées et chiffrées **sur l'appareil** — Kalyx n'a aucun serveur de comptes, aucun accès à vos fonds.
+![Non-custodial](https://img.shields.io/badge/keys-non--custodial-2ea44f)
+![No independent audit](https://img.shields.io/badge/security%20audit-none%20yet-orange)
+![Android](https://img.shields.io/badge/platform-Android%20APK-3ddc84)
+[![Latest release](https://img.shields.io/github/v/release/ahmedsignate2/kalyx-wallet-release?label=latest)](https://github.com/ahmedsignate2/kalyx-wallet-release/releases/latest)
 
-🌐 Site : **[kalyxwallet.com](https://kalyxwallet.com)** · 📧 Support : **support@kalyxwallet.com** · 💬 Telegram : **[@kalyxntw](https://t.me/kalyxntw)**
-
----
-
-## 📥 Télécharger l'APK (Android)
-
-👉 **[kalyx-wallet.apk — dernière version](https://github.com/ahmedsignate2/nova-wallet-release/releases/latest/download/kalyx-wallet.apk)**
-
-Toutes les versions : [Releases](https://github.com/ahmedsignate2/nova-wallet-release/releases).
-
-### Installation
-1. Téléchargez l'APK depuis votre téléphone.
-2. Ouvrez le fichier.
-3. Si Android le demande, autorisez l'installation depuis cette source : **Paramètres → Sécurité → Installer des applications inconnues**.
-4. Lancez Kalyx, créez un portefeuille (ou importez une phrase), notez vos 12 mots.
-
-iOS et extension navigateur : à venir.
+> ⚠️ **Beta software — not independently audited. Only use funds you can afford to lose.**
+> ⚠️ **Version bêta — non auditée. N'utilisez que des montants que vous pouvez vous permettre de perdre.**
 
 ---
 
-## ✨ Ce que fait l'application
+## 📥 Download / Télécharger
 
-* **Multi-chaînes** — Bitcoin (SegWit natif), Ethereum et ses Layer 2, Solana : plus de 60 réseaux agrégés dans un seul solde.
-* **Envoyer en quatre gestes** — destinataire, montant, récapitulatif en devise, puis maintien de 1,2 s. Détection d'empoisonnement d'adresse **bloquante**.
-* **Swap & Bridge** — Jupiter (Solana), LI.FI et Relay (EVM, cross-chain). Frais Kalyx : 0,3 % sur LI.FI, 0 % ailleurs.
-* **Earn** — Aave v3, Lido, Rocket Pool, Benqi, Jito, Marinade. 0 % de frais Kalyx.
-* **dApps** — navigateur intégré et **WalletConnect v2** (EVM, Solana, Bitcoin). Chaque signature est simulée et expliquée en clair avant d'être donnée (WalletConnect Verify, GoPlus).
-* **Sécurité** — AES-256-GCM avec clé dérivée du PIN (scrypt), stockage Keystore / Keychain, biométrie, délai croissant après un mauvais code, floutage dans les applications récentes.
-* **Sauvegarde chiffrée** — fichier local ou dossier privé Google Drive, chiffré sur l'appareil avec votre mot de passe. Sans lui, la sauvegarde est inutilisable, même par Kalyx.
-* **Copilot** — assistant intégré, avec votre propre clé d'IA (BYOK). Il ne voit jamais vos adresses, clés, phrase ou PIN.
-* **15 langues.**
+👉 **[kalyx-wallet.apk — latest version](https://github.com/ahmedsignate2/kalyx-wallet-release/releases/latest/download/kalyx-wallet.apk)**
 
----
+- Neutral link that always points to the latest version: **[kalyxwallet.com/download](https://kalyxwallet.com/download)**
+- All versions: [Releases](https://github.com/ahmedsignate2/kalyx-wallet-release/releases)
+- Checksum of the latest APK: **[kalyx-wallet.apk.sha256](https://github.com/ahmedsignate2/kalyx-wallet-release/releases/latest/download/kalyx-wallet.apk.sha256)**
 
-## ⚠️ Avertissement
+**Only download Kalyx from this repository or from kalyxwallet.com.** Any APK obtained elsewhere (Telegram groups, third-party stores, "mods") must be considered malicious.
 
-* **Version de test (bêta)** : le logiciel n'a pas encore fait l'objet d'un audit de sécurité indépendant.
-* L'application est fournie « en l'état », sans garantie d'aucune sorte.
-* L'éditeur ne peut être tenu responsable de pertes de fonds, d'erreurs de réseau, de défaillances de services tiers (RPC, agrégateurs, WalletConnect) ou d'une mauvaise manipulation de votre phrase de récupération.
-* **Testez avec des montants minimes ou sur testnet.** Une transaction confirmée est irréversible ; une phrase perdue ne se récupère pas.
+### Installation (Android)
+1. Download the APK on your phone and open it.
+2. If Android asks, allow installation from this source (*Settings → Security → Install unknown apps*).
+3. Open Kalyx, create a wallet (or import a recovery phrase) and **write your 12 words down offline**.
 
-Conditions d'utilisation et politique de confidentialité : [kalyxwallet.com/terms](https://kalyxwallet.com/terms/) · [kalyxwallet.com/privacy](https://kalyxwallet.com/privacy/)
+iOS and browser extension: coming later.
 
 ---
 
-## 🧪 Signaler un bug
+## ✅ Verify the APK / Vérifier l'APK
 
-* Ouvrez une **[issue](https://github.com/ahmedsignate2/nova-wallet-release/issues)** (version de l'app, téléphone, étapes, capture).
-* Ou depuis l'application : *Menu → Support* génère un ticket de diagnostic **sans aucune donnée sensible**.
-* Ou par e-mail : **support@kalyxwallet.com**
+Every release publishes the APK **and** its `kalyx-wallet.apk.sha256`. The SHA-256 is also printed in the release notes.
+
+**1. Checksum** — the downloaded file is exactly the published one:
+```bash
+sha256sum -c kalyx-wallet.apk.sha256
+# kalyx-wallet.apk: OK
+```
+(Windows PowerShell: `Get-FileHash kalyx-wallet.apk -Algorithm SHA256`)
+
+**2. Signature** — the APK was signed with the official Kalyx key. The signing certificate fingerprint is the same for all official releases; Android refuses to update an app with a different key:
+```bash
+apksigner verify --print-certs kalyx-wallet.apk
+```
+Expected certificate SHA-256:
+```
+DD:CE:CC:7F:5B:1A:08:C3:4C:32:07:2B:39:04:2C:27:8F:2F:70:1F:2E:52:DE:F2:87:4D:9E:8D:C2:A8:8A:F0
+```
+(`apksigner` ships with the Android SDK build-tools.)
+
+If either check fails, **do not install** and report it (see Security).
 
 ---
 
-## 💼 Partenariats & acquisition
+## ✨ What the app does / Ce que fait l'application
 
-Le code source de Kalyx est propriétaire. Pour un partenariat, un audit ou une demande d'acquisition : **support@kalyxwallet.com**.
+- **Multi-chain** — Bitcoin (native SegWit), Ethereum and its Layer 2s, Solana: 60+ networks aggregated in one balance.
+- **Send in four steps** — recipient, amount, fiat summary, hold to confirm. **Blocking** address-poisoning detection, transaction simulation.
+- **Swap & bridge** — Jupiter (Solana), LI.FI and Relay (EVM, cross-chain). Kalyx fee: 0.3 % on swaps, 0 % on send/receive and Earn.
+- **Earn** — Aave v3, Lido, Rocket Pool, Benqi, Jito, Marinade. 0 % Kalyx fee.
+- **dApps** — built-in browser and **WalletConnect v2** (EVM, Solana, Bitcoin). Every signature is simulated and explained in plain language before you give it.
+- **Security** — AES-256-GCM with a key derived from your PIN (scrypt), Keystore/Keychain storage, biometrics, growing delay after a wrong PIN, blur in recent apps.
+- **Encrypted backup** — local file or private Google Drive folder, encrypted on-device with your password. Useless without it, even to Kalyx.
+- **Copilot** — built-in assistant with your own AI key (BYOK). It never sees your addresses, keys, phrase or PIN.
+- **Web dashboard** — [app.kalyxwallet.com](https://app.kalyxwallet.com): read-only view of your wallet; every signature is still approved on your phone.
+- **15 languages.**
 
 ---
 
-Copyright © 2026 Kalyx. Tous droits réservés. Toute décompilation, rétro-ingénierie ou redistribution non autorisée de l'APK est interdite.
+## 🔒 Security / Sécurité
+
+- **Non-custodial**: keys are generated and stay on your phone. No Kalyx server, no account, no access to your funds.
+- **No independent audit yet.** Built and maintained by a solo developer.
+- Kalyx will **never** ask for your recovery phrase, private key, PIN or password — not in the app, not by e-mail, not on Telegram.
+- Report a vulnerability privately: **[SECURITY.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/SECURITY.md)** — Telegram [@kalyxntw](https://t.me/kalyxntw) · support@kalyxwallet.com. Never in public issues.
+
+Terms & privacy: [kalyxwallet.com/terms](https://kalyxwallet.com/terms/) · [kalyxwallet.com/privacy](https://kalyxwallet.com/privacy/)
+
+---
+
+## 🧪 Report a bug / Signaler un bug
+
+- Open an **[issue](https://github.com/ahmedsignate2/kalyx-wallet-release/issues)** (app version, phone, steps, screenshot).
+- From the app: *Menu → Support* generates a diagnostic ticket **with no sensitive data**.
+- E-mail: **support@kalyxwallet.com**
+
+---
+
+## 💼 Licensing & acquisition
+
+Kalyx source code is proprietary and available for review at [kalyx-wallet](https://github.com/ahmedsignate2/kalyx-wallet) (see its [LICENSE](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/LICENSE)). Commercial license, partnership or acquisition: **support@kalyxwallet.com** · Telegram [@kalyxntw](https://t.me/kalyxntw).
+
+---
+
+Copyright © 2026 KALYX. All rights reserved. Unauthorized decompilation, reverse engineering or redistribution of the APK is prohibited.
