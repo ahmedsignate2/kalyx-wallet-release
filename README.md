@@ -8,6 +8,9 @@ Source code: **[github.com/ahmedsignate2/kalyx-wallet](https://github.com/ahmeds
 ![Android](https://img.shields.io/badge/platform-Android%20APK-3ddc84)
 [![Latest release](https://img.shields.io/github/v/release/ahmedsignate2/kalyx-wallet-release?label=latest)](https://github.com/ahmedsignate2/kalyx-wallet-release/releases/latest)
 
+> 🚀 **Open beta — free. Try it and tell us what you think:** Telegram [@kalyxntw](https://t.me/kalyxntw) · support@kalyxwallet.com
+> 🚀 **Bêta ouverte — gratuite. Testez-la et donnez votre avis.**
+>
 > ⚠️ **Beta software — not independently audited. Only use funds you can afford to lose.**
 > ⚠️ **Version bêta — non auditée. N'utilisez que des montants que vous pouvez vous permettre de perdre.**
 
@@ -27,6 +30,8 @@ Source code: **[github.com/ahmedsignate2/kalyx-wallet](https://github.com/ahmeds
 1. Download the APK on your phone and open it.
 2. If Android asks, allow installation from this source (*Settings → Security → Install unknown apps*).
 3. Open Kalyx, create a wallet (or import a recovery phrase) and **write your 12 words down offline**.
+
+**Updating:** download the new APK and install it over the existing app — your wallets are kept (same signing key). There are **no over-the-air updates**: the app only runs the code of the APK you installed.
 
 iOS and browser extension: coming later.
 
@@ -59,16 +64,17 @@ If either check fails, **do not install** and report it (see Security).
 
 ## ✨ What the app does / Ce que fait l'application
 
-- **Multi-chain** — Bitcoin (native SegWit), Ethereum and its Layer 2s, Solana: 60+ networks aggregated in one balance.
-- **Send in four steps** — recipient, amount, fiat summary, hold to confirm. **Blocking** address-poisoning detection, transaction simulation.
-- **Swap & bridge** — Jupiter (Solana), LI.FI and Relay (EVM, cross-chain). Kalyx fee: 0.3 % on swaps, 0 % on send/receive and Earn.
-- **Earn** — Aave v3, Lido, Rocket Pool, Benqi, Jito, Marinade. 0 % Kalyx fee.
-- **dApps** — built-in browser and **WalletConnect v2** (EVM, Solana, Bitcoin). Every signature is simulated and explained in plain language before you give it.
-- **Security** — AES-256-GCM with a key derived from your PIN (scrypt), Keystore/Keychain storage, biometrics, growing delay after a wrong PIN, blur in recent apps.
+- **65 networks** — 62 EVM networks (Ethereum, Base, Arbitrum, Optimism, Polygon, BNB Chain, Avalanche…) plus **Bitcoin** (native SegWit), **Solana** and **TON**, aggregated in one balance. Test networks (Sepolia, Base Sepolia, Monad Testnet, Solana Devnet, TON Testnet) can be shown, kept apart and never counted in your total.
+- **Send in four steps** — asset, recipient, amount, then **hold to send**. **Blocking** address-poisoning detection, first-time-recipient warning, **Anti-Drainer** transaction simulation.
+- **Anti-coercion** — a **duress code** opens a decoy wallet: your real wallets, contacts and history stay invisible. A **whitelist** keeps sends to approved addresses only (changes take effect after 24 h).
+- **Swap & bridge** — LI.FI and Relay (EVM, cross-chain), Jupiter (Solana), STON.fi (TON). Kalyx fee: 0.3 % on swaps, 0 % on send/receive and Earn.
+- **Earn** — Aave v3, Lido, Rocket Pool, Benqi, Jito, Marinade, Tonstakers. 0 % Kalyx fee.
+- **dApps** — built-in browser, **WalletConnect v2** (EVM, Solana, Bitcoin) and **TON Connect**. Every signature is simulated and explained in plain language before you give it; spending approvals can be reviewed and **revoked in bulk**.
+- **Security** — AES-256-GCM with a key derived from your PIN (scrypt), Keystore storage, biometrics, growing delay after a wrong PIN (clock changes don't shorten it), auto-lock, blur in recent apps.
 - **Encrypted backup** — local file or private Google Drive folder, encrypted on-device with your password. Useless without it, even to Kalyx.
-- **Copilot** — built-in assistant with your own AI key (BYOK). It never sees your addresses, keys, phrase or PIN.
-- **Web dashboard** — [app.kalyxwallet.com](https://app.kalyxwallet.com): read-only view of your wallet; every signature is still approved on your phone.
-- **15 languages.**
+- **Desktop & Telegram** — [app.kalyxwallet.com](https://app.kalyxwallet.com) and the Telegram mini app: balances, tokens, NFTs, filterable activity, market, **send / receive / swap** — every signature is still approved on your phone. Plus a **Telegram bot** for prices, gas, token scans and price alerts.
+- **Copilot** — built-in assistant with your own AI key (BYOK: DeepSeek, OpenAI, Anthropic, Gemini, Groq, OpenRouter…). It never sees your keys, phrase or PIN.
+- **Watch-only wallets**, account discovery on import, contacts, price alerts, **15 languages**.
 
 ---
 
