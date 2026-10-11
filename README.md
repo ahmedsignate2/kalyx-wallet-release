@@ -101,6 +101,8 @@ Terms & privacy: [kalyxwallet.com/terms](https://kalyxwallet.com/terms/) · [kal
 
 Kalyx source code is proprietary and available for review at [kalyx-wallet](https://github.com/ahmedsignate2/kalyx-wallet) (see its [LICENSE](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/LICENSE)). Commercial license, partnership or acquisition: **support@kalyxwallet.com** · Telegram [@kalyxntw](https://t.me/kalyxntw).
 
+Sale documents (French): [sale dossier, IP audit, listing, white-label license template](docs/vente/README.md).
+
 ---
 
 Copyright © 2026 KALYX. All rights reserved. Unauthorized decompilation, reverse engineering or redistribution of the APK is prohibited.
