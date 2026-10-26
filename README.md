@@ -1,12 +1,13 @@
 # Kalyx Wallet — Releases
 
 **Official Android releases (signed APK) of Kalyx Wallet, a non-custodial multi-chain crypto wallet.**
-Source code: **[github.com/ahmedsignate2/kalyx-wallet](https://github.com/ahmedsignate2/kalyx-wallet)** · Site: **[kalyxwallet.com](https://kalyxwallet.com)** · Web dashboard: **[app.kalyxwallet.com](https://app.kalyxwallet.com)**
+Source code: **[github.com/ahmedsignate2/kalyx-wallet](https://github.com/ahmedsignate2/kalyx-wallet)** · Site: **[kalyxwallet.com](https://kalyxwallet.com)** · Web dashboard: **[app.kalyxwallet.com](https://app.kalyxwallet.com)** · Security: **[vulnerability disclosure program](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/docs/security/VDP.md)**
 
 ![Non-custodial](https://img.shields.io/badge/keys-non--custodial-2ea44f)
 ![No independent audit](https://img.shields.io/badge/security%20audit-none%20yet-orange)
 ![Android](https://img.shields.io/badge/platform-Android%20APK-3ddc84)
 [![Latest release](https://img.shields.io/github/v/release/ahmedsignate2/kalyx-wallet-release?label=latest)](https://github.com/ahmedsignate2/kalyx-wallet-release/releases/latest)
+[![Vulnerability disclosure: HackerOne](https://img.shields.io/badge/VDP-HackerOne-494649)](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/docs/security/VDP.md)
 
 > 🚀 **Open beta — free. Try it and tell us what you think:** Telegram [@kalyxntw](https://t.me/kalyxntw) · support@kalyxwallet.com
 > 🚀 **Bêta ouverte — gratuite. Testez-la et donnez votre avis.**
@@ -31,9 +32,16 @@ Source code: **[github.com/ahmedsignate2/kalyx-wallet](https://github.com/ahmeds
 2. If Android asks, allow installation from this source (*Settings → Security → Install unknown apps*).
 3. Open Kalyx, create a wallet (or import a recovery phrase) and **write your 12 words down offline**.
 
-**Updating:** download the new APK and install it over the existing app — your wallets are kept (same signing key). There are **no over-the-air updates**: the app only runs the code of the APK you installed.
+**Updating:** download the new APK and install it over the existing app — your wallets are kept (same signing key). There are **no over-the-air updates** in release builds: the app only runs the code of the APK you installed.
 
-iOS and browser extension: coming later.
+### Other platforms / Autres plateformes
+
+| | |
+|---|---|
+| 🧩 **Browser extension (beta)** | Chrome, Edge, Brave — invite-only beta on the Chrome Web Store. Full wallet (keys encrypted on the computer) or **companion mode** (keys stay on your phone, every signature approved in the app). EVM, Solana, Bitcoin, TON. |
+| 🖥️ **Web dashboard** | [app.kalyxwallet.com](https://app.kalyxwallet.com) — the same interface as the extension, linked to your phone by QR code (WalletConnect): no key, no password. |
+| ✈️ **Telegram** | Mini app (the web dashboard) + bot: prices, gas, token scans, price alerts. |
+| 🍎 **iOS** | Coming later. |
 
 ---
 
@@ -66,24 +74,33 @@ If either check fails, **do not install** and report it (see Security).
 
 - **65 networks** — 62 EVM networks (Ethereum, Base, Arbitrum, Optimism, Polygon, BNB Chain, Avalanche…) plus **Bitcoin** (native SegWit), **Solana** and **TON**, aggregated in one balance. Test networks (Sepolia, Base Sepolia, Monad Testnet, Solana Devnet, TON Testnet) can be shown, kept apart and never counted in your total.
 - **Send in four steps** — asset, recipient, amount, then **hold to send**. **Blocking** address-poisoning detection, first-time-recipient warning, **Anti-Drainer** transaction simulation.
+- **Every signature explained** — plain-language summary and a **risk score** (0-100, same engine in the app and the extension); a high score requires holding to sign.
 - **Anti-coercion** — a **duress code** opens a decoy wallet: your real wallets, contacts and history stay invisible. A **whitelist** keeps sends to approved addresses only (changes take effect after 24 h).
 - **Swap & bridge** — LI.FI and Relay (EVM, cross-chain), Jupiter (Solana), STON.fi (TON). Kalyx fee: 0.3 % on swaps, 0 % on send/receive and Earn.
 - **Earn** — Aave v3, Lido, Rocket Pool, Benqi, Jito, Marinade, Tonstakers. 0 % Kalyx fee.
-- **dApps** — built-in browser, **WalletConnect v2** (EVM, Solana, Bitcoin) and **TON Connect**. Every signature is simulated and explained in plain language before you give it; spending approvals can be reviewed and **revoked in bulk**.
+- **dApps** — built-in browser, **WalletConnect v2** (EVM, Solana, Bitcoin) and **TON Connect**. Spending approvals can be reviewed and **revoked in bulk**.
+- **Connection tracking** — for every linked site or extension: its last real sign of life (green dot only if it answers), its expiry date, and an immediate disconnect.
+- **Companion mode** — link the browser extension or the web dashboard to your phone with one QR code: all your wallets and accounts, keys never leave the phone.
 - **Security** — AES-256-GCM with a key derived from your PIN (scrypt), Keystore storage, biometrics, growing delay after a wrong PIN (clock changes don't shorten it), auto-lock, blur in recent apps.
 - **Encrypted backup** — local file or private Google Drive folder, encrypted on-device with your password. Useless without it, even to Kalyx.
-- **Desktop & Telegram** — [app.kalyxwallet.com](https://app.kalyxwallet.com) and the Telegram mini app: balances, tokens, NFTs, filterable activity, market, **send / receive / swap** — every signature is still approved on your phone. Plus a **Telegram bot** for prices, gas, token scans and price alerts.
-- **Copilot** — built-in assistant with your own AI key (BYOK: DeepSeek, OpenAI, Anthropic, Gemini, Groq, OpenRouter…). It never sees your keys, phrase or PIN.
+- **Copilot** — optional assistant with your own AI key (BYOK: DeepSeek, OpenAI, Anthropic, Gemini, Groq, OpenRouter…). Off by default; it never sees your keys, phrase or PIN.
 - **Watch-only wallets**, account discovery on import, contacts, price alerts, **15 languages**.
 
 ---
 
 ## 🔒 Security / Sécurité
 
-- **Non-custodial**: keys are generated and stay on your phone. No Kalyx server, no account, no access to your funds.
+- **Non-custodial**: keys are generated and stay on your device. No Kalyx server, no account, no access to your funds.
 - **No independent audit yet.** Built and maintained by a solo developer.
 - Kalyx will **never** ask for your recovery phrase, private key, PIN or password — not in the app, not by e-mail, not on Telegram.
-- Report a vulnerability privately: **[SECURITY.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/SECURITY.md)** — Telegram [@kalyxntw](https://t.me/kalyxntw) · support@kalyxwallet.com. Never in public issues.
+
+### Report a vulnerability / Signaler une faille
+
+Kalyx runs a **vulnerability disclosure program (VDP) on HackerOne**, without monetary rewards: valid reports are credited publicly (with your consent) in the release notes.
+
+- Policy, rules of engagement and safe harbor: **[VDP.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/docs/security/VDP.md)**
+- Assets in scope and out of scope: **[SCOPE.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/docs/security/SCOPE.md)** — only the **latest release** of the APK is in scope.
+- How to report: **[SECURITY.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/SECURITY.md)** — through the HackerOne program, or support@kalyxwallet.com with "SECURITY" in the subject. **Never in public issues.**
 
 Terms & privacy: [kalyxwallet.com/terms](https://kalyxwallet.com/terms/) · [kalyxwallet.com/privacy](https://kalyxwallet.com/privacy/)
 
@@ -91,7 +108,7 @@ Terms & privacy: [kalyxwallet.com/terms](https://kalyxwallet.com/terms/) · [kal
 
 ## 🧪 Report a bug / Signaler un bug
 
-- Open an **[issue](https://github.com/ahmedsignate2/kalyx-wallet-release/issues)** (app version, phone, steps, screenshot).
+- Open an **[issue](https://github.com/ahmedsignate2/kalyx-wallet-release/issues)** (app version, phone, steps, screenshot) — not for security issues.
 - From the app: *Menu → Support* generates a diagnostic ticket **with no sensitive data**.
 - E-mail: **support@kalyxwallet.com**
 
@@ -105,4 +122,4 @@ Sale documents (French): [sale dossier, IP audit, listing, white-label license t
 
 ---
 
-Copyright © 2026 KALYX. All rights reserved. Unauthorized decompilation, reverse engineering or redistribution of the APK is prohibited.
+Copyright © 2026 KALYX. All rights reserved. Redistribution of the APK is prohibited. Decompilation and reverse engineering are prohibited **except for good-faith security research conducted under the [vulnerability disclosure program](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/docs/security/VDP.md)**, which is authorized (safe harbor).
