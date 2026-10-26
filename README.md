@@ -100,7 +100,7 @@ Kalyx runs a **vulnerability disclosure program (VDP) on HackerOne**, without mo
 
 - Policy, rules of engagement and safe harbor: **[VDP.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/docs/security/VDP.md)**
 - Assets in scope and out of scope: **[SCOPE.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/docs/security/SCOPE.md)** — only the **latest release** of the APK is in scope.
-- How to report: **[SECURITY.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/SECURITY.md)** — through the HackerOne program, or support@kalyxwallet.com with "SECURITY" in the subject. **Never in public issues.**
+- How to report: email **security@kalyxwallet.com** (immediate acknowledgement with a ticket number, every report read by a person) or the HackerOne program — see **[SECURITY.md](https://github.com/ahmedsignate2/kalyx-wallet/blob/main/SECURITY.md)**. **Never in public issues.**
 
 Terms & privacy: [kalyxwallet.com/terms](https://kalyxwallet.com/terms/) · [kalyxwallet.com/privacy](https://kalyxwallet.com/privacy/)
 
